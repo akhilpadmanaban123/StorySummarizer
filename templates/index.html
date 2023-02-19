@@ -1,1 +1,40 @@
 
+<!doctype html>
+<html>
+   <head>
+      <title>Image Summary Generator</title>
+      <link rel="stylesheet" type="text/css" href="static/styles.css">
+      <style>
+         .custom-file-upload {
+            border: 2px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+         }
+         .custom-file-upload:hover {
+            background-color: #e0e0e0;
+         }
+         .custom-file-upload i {
+            margin-right: 5px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Image Summary Generator</h1>
+      <form method="POST" enctype="multipart/form-data">
+         <label for="image" id="image" class="custom-file-upload">
+            <input class="fa fa-cloud-upload" type="file" id="image" name="image">
+         </label>
+         <br>
+         <input type="submit" value="Generate Summary">
+      </form>
+      <h1>Text Summary</h1>
+      <p><strong>Original Data:</strong><br> {{ text }}</p>
+	<p><strong>Summary:</strong><br> {{ summary }}</p>
+   </body>
+</html>
