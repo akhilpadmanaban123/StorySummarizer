@@ -5,7 +5,7 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-openai.api_key="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"
+openai.api_key="YOUR_API KEYYYYYYYYYYYYYYYYY"
 
 def Image_to_Text(img_path):
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
